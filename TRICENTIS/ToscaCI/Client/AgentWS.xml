@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16" ?>
+<testConfiguration>
+<TestEvents>
+<TestEvent>API_Track_Trace</TestEvent>
+</TestEvents>
+</testConfiguration>

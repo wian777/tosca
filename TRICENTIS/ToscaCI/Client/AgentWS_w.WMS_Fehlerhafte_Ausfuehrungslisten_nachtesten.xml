@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-16" ?>
+<testConfiguration>
+	<TestEvents>
+		<TestEvent>w.WMS_Fehlerhafte_Ausführungslisten_nachtesten</TestEvent>
+	</TestEvents>
+</testConfiguration>
