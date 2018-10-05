@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TOSCASettings xsi:schemaLocation="TOSCANamespace Settings.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="TOSCANamespace">
+  <Category name="Engine">
+    <Category name="String Comparison">
+      <Setting name="Trim Mode" legacyPath="BaseSettings.TrimMode">1</Setting>
+      <Setting name="Case Sensitivity" legacyPath="BaseSettings.CaseSensitivity">1</Setting>
+      <Setting name="Exact Match Delimiter" legacyPath="BaseSettings.ExactMatchDelimitter">&lt;</Setting>
+      <Setting name="Enable Like Match" legacyPath="BaseSettings.EnableLikeMatch">0</Setting>
+      <Setting name="Equate Linebreaks" legacyPath="BaseSettings.EquateLineBreaks">False</Setting>
+      <Setting name="Escape Character" legacyPath="BaseSettings.EscapeCharacter">~</Setting>
+    </Category>
+    <Setting name="Class Mapping Path" legacyPath="BaseSettings.ClassMappingPath">@{Environment.AllUsersAppData}\Settings\Dat\ObjectMappings.dat;${TRICENTIS_HOME}\dll\dat\ObjectMappings.dat</Setting>
+    <Setting name="Executable to Start" legacyPath="BaseSettings.StartExe">${TRICENTIS_HOME}\dll\TOSCAExecutor.exe</Setting>
+    <Category name="PDF Compare">
+      <Setting name="Application" legacyPath="BaseSettings.ViewDiff">0</Setting>
+      <Setting name="Layout" legacyPath="BaseSettings.layout">0</Setting>
+    </Category>
+    <Setting name="Windows Class Mapping Path" legacyPath="BaseSettings.WindowsClassMappingPath">@{Environment.AllUsersAppData}\Settings\Dat\WinClassMappings.dat;${TRICENTIS_HOME}\dll\dat\WinClassMappings.dat</Setting>
+    <Setting name="Key Delay" legacyPath="BaseSettings.keyDelay">100</Setting>
+    <Setting name="Wait Intermediate" legacyPath="BaseSettings.waitIntermediate">0</Setting>
+    <Setting name="Execution Timeout" legacyPath="BaseSettings.Execution Timeout">5000</Setting>
+    <Category name="Exit Key">
+      <Setting name="Keys" legacyPath="Exit Key.ExitKeys">{ESC}</Setting>
+      <Setting name="Time to wait" legacyPath="Exit Key.keyDelay">1</Setting>
+    </Category>
+    <Category name="ObjectMaps">
+      <Setting name="DynamicTranslate" legacyPath="Engine.ObjectMaps.DynamicTranslate">1</Setting>
+    </Category>
+    <Setting name="Application's current version" legacyPath="FunctionLayer.Version">&lt;Version not set&gt;</Setting>
+    <Category name="PDH">
+      <Setting name="Counter Name" legacyPath="FunctionLayer.PDH.CounterName"></Setting>
+      <Setting name="Object Name" legacyPath="FunctionLayer.PDH.ObjectName"></Setting>
+    </Category>
+    <Category name="OCR">
+      <Setting name="EngineName" legacyPath="Engine.OCR.EngineName">Textract</Setting>
+      <Category name="Textract">
+        <Setting name="DumpImage" legacyPath="Engine.OCR.Textract.DumpImage">0</Setting>
+      </Category>
+      <Category name="Tesseract">
+        <Setting name="Language" legacyPath="Engine.OCR.Tesseract.Language">eng</Setting>
+        <Setting name="CharSet" legacyPath="Engine.OCR.Tesseract.CharSet">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;&gt;-+*#~!.:,|'"/\</Setting>
+        <Setting name="ScaleFactor" legacyPath="Engine.OCR.Tesseract.ScaleFactor">3</Setting>
+        <Setting name="DumpImage" legacyPath="Engine.OCR.Tesseract.DumpImage">0</Setting>
+        <Setting name="Flip" legacyPath="Engine.OCR.Tesseract.Flip">0</Setting>
+        <Setting name="UseInversion" legacyPath="Engine.OCR.Tesseract.UseInversion">0</Setting>
+        <Setting name="MonochromBrightnessFactor" legacyPath="Engine.OCR.Tesseract.MonochromBrightnessFactor">0.7</Setting>
+        <Setting name="UseMonochrom" legacyPath="Engine.OCR.Tesseract.UseMonochrom">1</Setting>
+        <Setting name="Rotation" legacyPath="Engine.OCR.Tesseract.Rotation">0</Setting>
+        <Setting name="SegmentationMode" legacyPath="Engine.OCR.Tesseract.SegmentationMode">7</Setting>
+        <Setting name="RemoveLineBreaks" legacyPath="Engine.OCR.Tesseract.RemoveLineBreaks">1</Setting>
+        <Setting name="SetCharSpacing" legacyPath="Engine.OCR.Tesseract.SetCharSpacing">-1</Setting>
+      </Category>
+    </Category>
+    <Category name="Waiton">
+      <Setting name="Retry Interval" legacyPath="FunctionLayer.WaitFor.DelayBetween">5</Setting>
+      <Setting name="Maximum Wait Duration" legacyPath="FunctionLayer.WaitFor.MaxDuration">30</Setting>
+      <Setting name="Script for Refreshing Target Application [opt]" legacyPath="FunctionLayer.WaitFor.RefreshScript"></Setting>
+    </Category>
+    <Category name="Baselines">
+      <Setting name="Dumps" legacyPath="BaseLines.Dumps">@{Environment.ProjectDir}\dump</Setting>
+      <Setting name="Directory" legacyPath="BaseLines.Path">@{Environment.ProjectDir}\baselines</Setting>
+    </Category>
+    <Category name="Number Format">
+      <Setting name="Format" legacyPath="ExecSuite.Numbers.Format">AUTODETECT</Setting>
+      <Setting name="Treat 3 Digits as Real" legacyPath="ExecSuite.Numbers.Treat3DigitsAsReal">0</Setting>
+      <Category name="Automatic Detection">
+        <Setting name="Decimal Symbols" legacyPath="ExecSuite.Numbers.Automatic Detection.decimalSymbols">.,</Setting>
+        <Setting name="Digit Grouping Symbols" legacyPath="ExecSuite.Numbers.Automatic Detection.digitGroupingSymbols">.'</Setting>
+      </Category>
+    </Category>
+    <Category name="Special Dates">
+      <Setting name="Fixed Holidays" legacyPath="ExecSuite.Dates.FixedHolidays">0101;0601;0105;1508;2610;0111;2412;2512;2612;3112</Setting>
+      <Setting name="Floating Holidays" legacyPath="ExecSuite.Dates.FloatingHolidays">-2;0;1;39;49;50;60</Setting>
+    </Category>
+    <Category name="Bool Comparison">
+      <Setting name="False Values" legacyPath="ExecSuite.Bool.FalseValues">false;0;falsch; ;grayed;n</Setting>
+      <Setting name="True Values" legacyPath="ExecSuite.Bool.TrueValues">true;-1;1;wahr;x;j</Setting>
+      <Setting name="Allow Bool Comparison for Data Type String" legacyPath="Engine.Bool Comparison.Allow Bool Comparison for Data Type String">1</Setting>
+    </Category>
+    <Category name="Translation">
+      <Setting name="Use Translation Cache" legacyPath="Translation.UseCache">1</Setting>
+      <Setting name="Enable Translation Mode" legacyPath="Translation.EnableTranslation">0</Setting>
+      <Setting name="Enable Window Title Translation" legacyPath="Translation.EnableWindowTitleTranslation">0</Setting>
+      <Setting name="Show Translation Errors" legacyPath="Translation.ShowTranslationErrors">1</Setting>
+      <Setting name="Source Language" legacyPath="Translation.SourceLanguage">Deutsch</Setting>
+      <Setting name="Target Language" legacyPath="Translation.TargetLanguage">Englisch</Setting>
+      <Setting name="Translation Sheet" legacyPath="Translation.TranslationSheet">Translation</Setting>
+      <Setting name="Translation Workbook" legacyPath="Translation.TranslationWorkbook">\\tfdbnbld01\LBase\QA\tosca\translation\LBASE_translations.xlsx</Setting>
+      <Setting name="Message Column" legacyPath="Translation.MessageColumn">MessageNumber</Setting>
+    </Category>
+    <Category name="Messages">
+      <Setting name="Operator Symbols" legacyPath="MsgSyntax.operatorSyntax">==;!=;&gt;;&lt;</Setting>
+      <Setting name="Syntax" legacyPath="MsgSyntax.msgSyntax">-&gt;&lt;testAction.LogName&gt;-&gt;&lt;paramAction.Name&gt; (&lt;paramAction.definition.TypeInfo&gt;)\r\nExpected &lt;paramAction.paramType&gt; property '&lt;paramAction.property&gt;' &lt;paramAction.operator&gt; '&lt;paramAction.Value&gt;'; current '&lt;paramAction.actValue&gt;'.</Setting>
+    </Category>
+    <Category name="Keyword">
+      <Setting name="Include Script" legacyPath="XML.IncludeScript">@{Engine.Keyword.Directory}\Include.vbs</Setting>
+      <Setting name="Directory" legacyPath="XML.KeyWordDir">\\tfdbnbld01\LBase\QA\tosca\Keywords;C:\Tosca_Projects\toscacommander\keywords;@{Environment.AppData}\g_keywords</Setting>
+      <Setting name="Scripting Timeout" legacyPath="XML.ScriptingTimeOut">10000</Setting>
+    </Category>
+    <Category name="DokuSnapper">
+      <Setting name="Template" legacyPath="DokuSnapper.Template">@{Environment.ProjectDir}\templates\TemplateDokuSnapper.doc</Setting>
+    </Category>
+    <Category name="Engine calculator">
+      <Setting name="Use Excel localization" legacyPath="Engine.Engine calculator.Use Excel localization">1</Setting>
+    </Category>
+  </Category>
+  <Category name="TEx">
+    <Category name="ObjectMaps">
+      <Setting name="ObjectMap Directory" legacyPath="XML.GUIMapDir">@{Environment.AppData}\objectmaps</Setting>
+    </Category>
+    <Category name="XMLDataExchange">
+      <Setting name="XMLEncoding" legacyPath="XML.Encoding">UTF-8</Setting>
+    </Category>
+  </Category>
+  <Category name="Wizard">
+    <Setting name="Class Mapping Path" legacyPath="BaseSettings.WizardMappingPath">@{Environment.AllUsersAppData}\Settings\Dat\WizardMappings.dat;${TRICENTIS_HOME}\dll\dat\WizardMappings.dat</Setting>
+    <Setting name="Minimize StatusBar during scanning" legacyPath="Wizard.MinimizeStatusBar">0</Setting>
+    <Setting name="FullPath" legacyPath="Wizard.Path">${TRICENTIS_HOME}\dll\TOSCAWizard.exe</Setting>
+    <Category name="HTML">
+      <Category name="Scan">
+        <Setting name="Scan Mode" legacyPath="HTMLEngine.Wizard.UseHTMLMessage">1</Setting>
+        <Setting name="SetDOMClick" legacyPath="HTMLEngine.Wizard.ShowUseDOMClick">0</Setting>
+        <Setting name="EventsToBeFiredAfterInput" legacyPath="HTMLEngine.Wizard.EventsToBeFiredAfterInput">onchange;onblur</Setting>
+      </Category>
+      <Category name="Frame">
+        <Setting name="Skip all frames for searching" legacyPath="HTMLEngine.Wizard.SkipAllFrames">0</Setting>
+        <Setting name="Skip specific frames for searching" legacyPath="HTMLEngine.Wizard.SkipFrames"></Setting>
+        <Setting name="Frames which contains trees" legacyPath="HTMLEngine.Wizard.TreeFrames"></Setting>
+      </Category>
+      <Setting name="Name of the table module" legacyPath="HTMLEngine.Wizard.Tabellensteuerung">WEBTABSTR</Setting>
+    </Category>
+    <Category name="Win32">
+      <Setting name="EnableLabelRecognition" legacyPath="Wizard.Win32.EnableLabelRecognition">1</Setting>
+      <Setting name="Name of the table module" legacyPath="Win32Engine.Wizard.Tabellensteuerung">LVWTABSTR</Setting>
+      <Category name="GenericTable">
+        <Setting name="SkipColumns" legacyPath="Win32Engine.Wizard.GenericTable.SkipColumns">0</Setting>
+        <Setting name="ShowAnalyzes" legacyPath="Win32Engine.Wizard.GenericTable.ShowAnalyzes">0</Setting>
+        <Category name="Header">
+          <Setting name="AnalyzeLeftPos" legacyPath="Win32Engine.Wizard.GenericTable.Header.AnalyzeLeftPos">3</Setting>
+          <Setting name="AnalyzeTopPos" legacyPath="Win32Engine.Wizard.GenericTable.Header.AnalyzeTopPos">4</Setting>
+          <Setting name="AnalyzeRightPos" legacyPath="Win32Engine.Wizard.GenericTable.Header.AnalyzeRightPos">5</Setting>
+          <Setting name="LineColor" legacyPath="Win32Engine.Wizard.GenericTable.Header.LineColor">16777215</Setting>
+          <Setting name="BackColor" legacyPath="Win32Engine.Wizard.GenericTable.Header.BackColor">14215660</Setting>
+          <Setting name="ActiveColorLine" legacyPath="Win32Engine.Wizard.GenericTable.Header.ActiveColorLine">16777215</Setting>
+          <Setting name="ActiveBackColor" legacyPath="Win32Engine.Wizard.GenericTable.Header.ActiveBackColor">14215660</Setting>
+          <Setting name="BorderColor" legacyPath="Win32Engine.Wizard.GenericTable.Header.BorderColor">8421504</Setting>
+        </Category>
+        <Category name="Rows">
+          <Setting name="AnalyzeLeftPos" legacyPath="Win32Engine.Wizard.GenericTable.Rows.AnalyzeLeftPos">4</Setting>
+          <Setting name="AnalyzeTopPos" legacyPath="Win32Engine.Wizard.GenericTable.Rows.AnalyzeTopPos">21</Setting>
+          <Setting name="AnalyzeRightPos" legacyPath="Win32Engine.Wizard.GenericTable.Rows.AnalyzeRightPos">5</Setting>
+          <Setting name="LineColor" legacyPath="Win32Engine.Wizard.GenericTable.Rows.LineColor">0</Setting>
+          <Setting name="BackColor" legacyPath="Win32Engine.Wizard.GenericTable.Rows.BackColor">16777215</Setting>
+          <Setting name="ActiveColorLine" legacyPath="Win32Engine.Wizard.GenericTable.Rows.ActiveColorLine">0</Setting>
+          <Setting name="ActiveBackColor" legacyPath="Win32Engine.Wizard.GenericTable.Rows.ActiveBackColor">12937777</Setting>
+          <Setting name="BorderColor" legacyPath="Win32Engine.Wizard.GenericTable.Rows.BorderColor">8421504</Setting>
+        </Category>
+      </Category>
+    </Category>
+    <Category name="SAP">
+      <Setting name="Name of the table module" legacyPath="SAPEngine.Wizard.Tabellensteuerung">SAPTABSTR</Setting>
+    </Category>
+    <Category name="Java">
+      <Setting name="ScanInvisibleControls" legacyPath="JavaEngine.Wizard.ScanInvisibleControls">0</Setting>
+      <Category name="Label">
+        <Setting name="ID" legacyPath="JavaEngine.Wizard.LabelID">Label</Setting>
+        <Setting name="Search" legacyPath="JavaEngine.Wizard.SearchLabel">0</Setting>
+      </Category>
+      <Setting name="Name of the table module" legacyPath="JavaEngine.Wizard.Tabellensteuerung">JAVATABSTR</Setting>
+    </Category>
+    <Category name="Host">
+      <Category name="Default MapID Location">
+        <Setting name="Column" legacyPath="HostEngine.DefaultMapID.Col">2</Setting>
+        <Setting name="Height" legacyPath="HostEngine.DefaultMapID.Height">1</Setting>
+        <Setting name="Length" legacyPath="HostEngine.DefaultMapID.Length">7</Setting>
+        <Setting name="Row" legacyPath="HostEngine.DefaultMapID.Row">2</Setting>
+      </Category>
+      <Setting name="Suppress Characters" legacyPath="HostEngine.Wizard.SuppressChars">:;</Setting>
+      <Setting name="Name of the table module" legacyPath="HostEngine.Wizard.Tabellensteuerung">HOSTTABSTR</Setting>
+    </Category>
+    <Category name="Gupta">
+      <Setting name="Name of the table module" legacyPath="GuptaEngine.Wizard.Tabellensteuerung">GUPTATABSTR</Setting>
+    </Category>
+    <Category name="Generic">
+      <Setting name="Show Control Structure" legacyPath="GenericEngine.Wizard.showStructure">0</Setting>
+      <Setting name="Show System Bars" legacyPath="GenericEngine.Wizard.showSystemBars">0</Setting>
+      <Category name="AdditionalStates">
+        <Setting name="TextBox" legacyPath="GenericEngine.Wizard.AdditionalStates.TextBox">State=NORMAL</Setting>
+      </Category>
+      <Category name="Labels">
+        <Setting name="ID" legacyPath="GenericEngine.Wizard.LabelId">42</Setting>
+        <Setting name="SearchForLabels" legacyPath="GenericEngine.Wizard.Labels">0</Setting>
+      </Category>
+      <Category name="Selectable Control Types">
+        <Setting name="Alert" legacyPath="GenericEngine.Wizard.SelectableControls.Alert">0</Setting>
+        <Setting name="Animation" legacyPath="GenericEngine.Wizard.SelectableControls.Animation">1</Setting>
+        <Setting name="Application" legacyPath="GenericEngine.Wizard.SelectableControls.Application">0</Setting>
+        <Setting name="Border" legacyPath="GenericEngine.Wizard.SelectableControls.Border">0</Setting>
+        <Setting name="ButtonDropDown" legacyPath="GenericEngine.Wizard.SelectableControls.ButtonDropDown">1</Setting>
+        <Setting name="ButtonDropDownGrid" legacyPath="GenericEngine.Wizard.SelectableControls.ButtonDropDownGrid">1</Setting>
+        <Setting name="ButtonMenu" legacyPath="GenericEngine.Wizard.SelectableControls.ButtonMenu">1</Setting>
+        <Setting name="Caret" legacyPath="GenericEngine.Wizard.SelectableControls.Caret">0</Setting>
+        <Setting name="Cell" legacyPath="GenericEngine.Wizard.SelectableControls.Cell">0</Setting>
+        <Setting name="Character" legacyPath="GenericEngine.Wizard.SelectableControls.Character">1</Setting>
+        <Setting name="Chart" legacyPath="GenericEngine.Wizard.SelectableControls.Chart">1</Setting>
+        <Setting name="CheckButton" legacyPath="GenericEngine.Wizard.SelectableControls.CheckButton">1</Setting>
+        <Setting name="Client" legacyPath="GenericEngine.Wizard.SelectableControls.Client">0</Setting>
+        <Setting name="Clock" legacyPath="GenericEngine.Wizard.SelectableControls.Clock">1</Setting>
+        <Setting name="Column" legacyPath="GenericEngine.Wizard.SelectableControls.Column">0</Setting>
+        <Setting name="ColumnHeader" legacyPath="GenericEngine.Wizard.SelectableControls.ColumnHeader">0</Setting>
+        <Setting name="ComboBox" legacyPath="GenericEngine.Wizard.SelectableControls.ComboBox">1</Setting>
+        <Setting name="Cursor" legacyPath="GenericEngine.Wizard.SelectableControls.Cursor">0</Setting>
+        <Setting name="Diagram" legacyPath="GenericEngine.Wizard.SelectableControls.Diagram">1</Setting>
+        <Setting name="Dial" legacyPath="GenericEngine.Wizard.SelectableControls.Dial">0</Setting>
+        <Setting name="Dialog" legacyPath="GenericEngine.Wizard.SelectableControls.Dialog">0</Setting>
+        <Setting name="Document" legacyPath="GenericEngine.Wizard.SelectableControls.Document">0</Setting>
+        <Setting name="DropList" legacyPath="GenericEngine.Wizard.SelectableControls.DropList">1</Setting>
+        <Setting name="Equation" legacyPath="GenericEngine.Wizard.SelectableControls.Equation">0</Setting>
+        <Setting name="Graphic" legacyPath="GenericEngine.Wizard.SelectableControls.Graphic">1</Setting>
+        <Setting name="Grip" legacyPath="GenericEngine.Wizard.SelectableControls.Grip">0</Setting>
+        <Setting name="Grouping" legacyPath="GenericEngine.Wizard.SelectableControls.Grouping">0</Setting>
+        <Setting name="HelpBalloon" legacyPath="GenericEngine.Wizard.SelectableControls.HelpBalloon">0</Setting>
+        <Setting name="HotKeyField" legacyPath="GenericEngine.Wizard.SelectableControls.HotKeyField">1</Setting>
+        <Setting name="Indicator" legacyPath="GenericEngine.Wizard.SelectableControls.Indicator">0</Setting>
+        <Setting name="IPAddress" legacyPath="GenericEngine.Wizard.SelectableControls.IPAddress">0</Setting>
+        <Setting name="Link" legacyPath="GenericEngine.Wizard.SelectableControls.Link">1</Setting>
+        <Setting name="List" legacyPath="GenericEngine.Wizard.SelectableControls.List">1</Setting>
+        <Setting name="ListItem" legacyPath="GenericEngine.Wizard.SelectableControls.ListItem">1</Setting>
+        <Setting name="MenuBar" legacyPath="GenericEngine.Wizard.SelectableControls.MenuBar">0</Setting>
+        <Setting name="MenuItem" legacyPath="GenericEngine.Wizard.SelectableControls.MenuItem">1</Setting>
+        <Setting name="MenuPopup" legacyPath="GenericEngine.Wizard.SelectableControls.MenuPopup">0</Setting>
+        <Setting name="Outline" legacyPath="GenericEngine.Wizard.SelectableControls.Outline">0</Setting>
+        <Setting name="OutlineButton" legacyPath="GenericEngine.Wizard.SelectableControls.OutlineButton">1</Setting>
+        <Setting name="OutlineItem" legacyPath="GenericEngine.Wizard.SelectableControls.OutlineItem">1</Setting>
+        <Setting name="Pagetab" legacyPath="GenericEngine.Wizard.SelectableControls.Pagetab">1</Setting>
+        <Setting name="PagetabList" legacyPath="GenericEngine.Wizard.SelectableControls.PagetabList">0</Setting>
+        <Setting name="Pane" legacyPath="GenericEngine.Wizard.SelectableControls.Pane">0</Setting>
+        <Setting name="ProgressBar" legacyPath="GenericEngine.Wizard.SelectableControls.ProgressBar">0</Setting>
+        <Setting name="PropertyPage" legacyPath="GenericEngine.Wizard.SelectableControls.PropertyPage">0</Setting>
+        <Setting name="PushButton" legacyPath="GenericEngine.Wizard.SelectableControls.PushButton">1</Setting>
+        <Setting name="RadioButton" legacyPath="GenericEngine.Wizard.SelectableControls.RadioButton">1</Setting>
+        <Setting name="Row" legacyPath="GenericEngine.Wizard.SelectableControls.Row">0</Setting>
+        <Setting name="RowHeader" legacyPath="GenericEngine.Wizard.SelectableControls.RowHeader">0</Setting>
+        <Setting name="ScrollBar" legacyPath="GenericEngine.Wizard.SelectableControls.ScrollBar">0</Setting>
+        <Setting name="Separator" legacyPath="GenericEngine.Wizard.SelectableControls.Separator">0</Setting>
+        <Setting name="Slider" legacyPath="GenericEngine.Wizard.SelectableControls.Slider">1</Setting>
+        <Setting name="Sound" legacyPath="GenericEngine.Wizard.SelectableControls.Sound">0</Setting>
+        <Setting name="SpinButton" legacyPath="GenericEngine.Wizard.SelectableControls.SpinButton">1</Setting>
+        <Setting name="SplitButton" legacyPath="GenericEngine.Wizard.SelectableControls.SplitButton">1</Setting>
+        <Setting name="StaticText" legacyPath="GenericEngine.Wizard.SelectableControls.StaticText">1</Setting>
+        <Setting name="StatusBar" legacyPath="GenericEngine.Wizard.SelectableControls.StatusBar">0</Setting>
+        <Setting name="Table" legacyPath="GenericEngine.Wizard.SelectableControls.Table">0</Setting>
+        <Setting name="Text" legacyPath="GenericEngine.Wizard.SelectableControls.Text">0</Setting>
+        <Setting name="TitleBar" legacyPath="GenericEngine.Wizard.SelectableControls.TitleBar">0</Setting>
+        <Setting name="ToolBar" legacyPath="GenericEngine.Wizard.SelectableControls.ToolBar">0</Setting>
+        <Setting name="ToolTip" legacyPath="GenericEngine.Wizard.SelectableControls.ToolTip">0</Setting>
+        <Setting name="WhiteSpace" legacyPath="GenericEngine.Wizard.SelectableControls.WhiteSpace">0</Setting>
+        <Setting name="Window" legacyPath="GenericEngine.Wizard.SelectableControls.Window">1</Setting>
+      </Category>
+    </Category>
+    <Category name="Delphi">
+      <Setting name="Name of the table module" legacyPath="DelphiEngine.Wizard.Tabellensteuerung">DELPHITABSTR</Setting>
+    </Category>
+    <Category name="DotNet">
+      <Setting name="Name of the table module" legacyPath="DotNetEngine.Wizard.Tabellensteuerung">DOTNETTABSTR</Setting>
+      <Setting name="IgnoreErrors" legacyPath="DotNetEngine.Wizard.IgnoreErrors">0</Setting>
+      <Category name="Mark">
+        <Setting name="Activate Window" legacyPath="DotNetEngine.Wizard.MarkActivateBrowserWindow">1</Setting>
+        <Setting name="Count" legacyPath="DotNetEngine.Wizard.MarkCount">3</Setting>
+      </Category>
+      <Category name="Properties for technical ID">
+        <Collection name="All" legacyPath="Wizard.DotNet.Properties for technical ID.All">
+          <CollectionEntry name="Name"></CollectionEntry>
+          <CollectionEntry name="ParentName"></CollectionEntry>
+        </Collection>
+      </Category>
+    </Category>
+    <Category name="Firefox">
+      <Setting name="Name of the table module" legacyPath="FireFoxEngine.Wizard.Tabellensteuerung">FIREFOXTABSTR</Setting>
+    </Category>
+    <Category name="Console">
+      <Category name="Default MapID Location">
+        <Setting name="Column" legacyPath="ConsoleEngine.DefaultMapID.Col">2</Setting>
+        <Setting name="Height" legacyPath="ConsoleEngine.DefaultMapID.Height">1</Setting>
+        <Setting name="Length" legacyPath="ConsoleEngine.DefaultMapID.Length">7</Setting>
+        <Setting name="Row" legacyPath="ConsoleEngine.DefaultMapID.Row">2</Setting>
+      </Category>
+      <Setting name="Suppress Characters" legacyPath="ConsoleEngine.Wizard.SuppressChars">:;</Setting>
+      <Setting name="Name of the table module" legacyPath="ConsoleEngine.Wizard.Tabellensteuerung">ConsoleTABSTR</Setting>
+      <Setting name="Field Color" legacyPath="ConsoleEngine.Wizard.FieldColor">1</Setting>
+    </Category>
+    <Category name="Excel">
+      <Setting name="Name of the table module" legacyPath="XLEngine.Wizard.Tabellensteuerung">XLTABSTR</Setting>
+    </Category>
+    <Category name="DBEngine">
+      <Setting name="Name of the table module" legacyPath="DBEngine.Wizard.Tabellensteuerung">DBTABSTR</Setting>
+    </Category>
+    <Category name="ManualEngine">
+      <Setting name="Name of the table module" legacyPath="ManualEngine.Wizard.Tabellensteuerung">MANUALTABSTR</Setting>
+    </Category>
+    <Category name="PBEngine">
+      <Setting name="Name of the table module" legacyPath="PBEngine.Wizard.Tabellensteuerung">PBTABSTR</Setting>
+    </Category>
+    <Category name="Outlook">
+      <Setting name="Name of the table module" legacyPath="OutlookEngine.Wizard.Tabellensteuerung">OUTLOOKTABSTR</Setting>
+    </Category>
+  </Category>
+  <Category name="TestCase from XL">
+    <Setting name="BusinessObjects' Workbook" legacyPath="TestCaseSpec.BOWorkBook"></Setting>
+    <Setting name="Method of cell-copy" legacyPath="TestCaseSpec.CellCopyMethod">1</Setting>
+    <Setting name="Domains' Workbook" legacyPath="TestCaseSpec.DomainWorkBook"></Setting>
+    <Setting name="Project's context" legacyPath="TestCaseSpec.MyContext">HOST</Setting>
+    <Setting name="Keep Actionmode Output" legacyPath="TestCaseSpec.OnOutputKeepActionMode">1</Setting>
+    <Setting name="Transport Updates to Source" legacyPath="TestCaseSpec.TransferUpdates">2</Setting>
+    <Setting name="Trim XL Values" legacyPath="TestCaseSpec.TrimXLValues">0</Setting>
+    <Category name="TestSet">
+      <Setting name="Verification Backcolor" legacyPath="TestCaseSpec.TestSet.AssertBy">COLOR_LIGHTGREEN</Setting>
+      <Setting name="Domain column" legacyPath="TestCaseSpec.TestSet.DomainCol">5</Setting>
+      <Setting name="Treat empty cells as Null" legacyPath="TestCaseSpec.TestSet.emptyIsNull">1</Setting>
+      <Setting name="First TestCase column" legacyPath="TestCaseSpec.TestSet.FirstDataCol">6</Setting>
+      <Setting name="First row containing data" legacyPath="TestCaseSpec.TestSet.FirstDataRow">2</Setting>
+      <Setting name="Last structuring column" legacyPath="TestCaseSpec.TestSet.LastStructureCol">4</Setting>
+      <Setting name="Row of TestCase title" legacyPath="TestCaseSpec.TestSet.TitleInRow">1</Setting>
+    </Category>
+  </Category>
+  <Category name="Special Engines">
+    <Category name="Common">
+      <Category name="ControlAnalyzer">
+        <Setting name="UseExternalControlAnalyzer" legacyPath="Special Engines.Common.ControlAnalyzer.UseExternalControlAnalyzer">0</Setting>
+        <Setting name="ExternalControlAnalyzerClass" legacyPath="Special Engines.Common.ControlAnalyzer.ExternalControlAnalyzerClass"></Setting>
+      </Category>
+    </Category>
+    <Category name="HTMLEngine">
+      <Setting name="Calculate Scroll-offset" legacyPath="HTMLEngine.CalculateScollOffsetHierarchically">1</Setting>
+      <Category name="TableContent">
+        <Setting name="CheckBoxes" legacyPath="HTMLEngine.ContentIncludeCB">1</Setting>
+        <Setting name="Fill Content for RowSpan Cells" legacyPath="HTMLEngine.Table.AddRowSpanContent">1</Setting>
+      </Category>
+      <Category name="Recovery">
+        <Setting name="URL" legacyPath="HTMLEngine.Recovery.URL"></Setting>
+      </Category>
+      <Category name="Wait Settings">
+        <Setting name="Retry test interval" legacyPath="HTMLEngine.WaitParameter.RetryInterval">100</Setting>
+        <Setting name="Text in status line " legacyPath="HTMLEngine.WaitParameter.StatusText"></Setting>
+        <Setting name="Total wait for browser" legacyPath="HTMLEngine.WaitParameter.WaitForBrowser">60</Setting>
+        <Setting name="Total wait for control" legacyPath="HTMLEngine.WaitParameter.WaitForControl">5000</Setting>
+        <Setting name="Total wait for operability of control" legacyPath="HTMLEngine.WaitParameter.WaitForOperable">5000</Setting>
+        <Category name="Wait for statuslabel">
+          <Setting name="Controls as statuslabel" legacyPath="Special Engines.HTMLEngine.Wait Settings.Wait for statuslabel.Controls as statuslabel"></Setting>
+          <Setting name="Total wait for controls as statuslabel" legacyPath="Special Engines.HTMLEngine.Wait Settings.Wait for statuslabel.Total wait for controls as statuslabel">30</Setting>
+        </Category>
+      </Category>
+    </Category>
+    <Category name="Win32Engine">
+      <Setting name="GetWin32Name" legacyPath="Win32Engine.GetWin32Name">0</Setting>
+      <Setting name="MessageWindowTitle" legacyPath="Win32Engine.MessageWindowTitle"></Setting>
+      <Setting name="Scrolling" legacyPath="Win32Engine.Scrolling">0</Setting>
+      <Setting name="SteeringComboBox" legacyPath="Win32Engine.SteeringComboBox">0</Setting>
+      <Setting name="SteeringEditBox" legacyPath="Win32Engine.SteeringEditBox">0</Setting>
+      <Setting name="UseToolTipFromWindow" legacyPath="Win32Engine.UseToolTipFromWindow">1</Setting>
+      <Setting name="UseOCR" legacyPath="Win32Engine.UseOCR">0</Setting>
+      <Setting name="ConsiderForegroundWindowWithoutCaption" legacyPath="Win32Engine.ConsiderForegroundWindowWithoutCaption">0</Setting>
+      <Setting name="Use absolute screen coordinates" legacyPath="Special Engines.Win32Engine.Use absolute screen coordinates">0</Setting>
+      <Category name="WaitingParameter">
+        <Setting name="RetryTime" legacyPath="Win32Engine.WaitingParameter.RetryTime">200</Setting>
+        <Setting name="WaitForWindow" legacyPath="Win32Engine.WaitingParameter.WaitForWindow">5000</Setting>
+        <Setting name="WaitTimeButtonClick" legacyPath="Win32Engine.WaitingParameter.WaitTimeButtonClick">500</Setting>
+      </Category>
+    </Category>
+    <Category name="WebServiceEngine">
+      <Setting name="Encoding" legacyPath="WebServiceEngine.Encoding">UTF-8</Setting>
+      <Setting name="Translate boolean values" legacyPath="WebServiceEngine.TranslateBoolean">Ja;Nein</Setting>
+      <Setting name="Time Out for Requests [ms]" legacyPath="WebServiceEngine.Timeout">60000</Setting>
+      <Category name="Java">
+        <Setting name="Path to JVM" legacyPath="WebServiceEngine.Java.PathToJVM"></Setting>
+        <Setting name="Shutdown JNI" legacyPath="WebServiceEngine.Java.Shutdown JNI">0</Setting>
+      </Category>
+      <Category name="Authorization">
+        <Setting name="Soap Request User Name" legacyPath="WebServiceEngine.Authorization.soapUserName"></Setting>
+        <Setting name="Soap Request Password" legacyPath="WebServiceEngine.Authorization.soapPassWord"></Setting>
+      </Category>
+      <Category name="Endpoints">
+        <Setting name="Attribute Name: ServiceName" legacyPath="WebServiceEngine.Endpoints.ServiceNameAttributeName">EndpointName</Setting>
+        <Setting name="Attribute Name: ServiceVersion" legacyPath="WebServiceEngine.Endpoints.ServiceVersionAttributeName">EndpointVersion</Setting>
+        <Setting name="Use endpoints specified in" legacyPath="WebServiceEngine.Endpoints.EndpointSpecification">0</Setting>
+        <Collection name="Endpoints" legacyPath="WebServiceEngine.Endpoints.Endpoints" />
+      </Category>
+      <Category name="Trace">
+        <Setting name="Path to request Files" legacyPath="WebServiceEngine.Trace.PathToRequestFiles">@{Environment.ProjectDir}\webserviceengine\requests</Setting>
+        <Setting name="Path to response Files" legacyPath="WebServiceEngine.Trace.PathToResponseFiles">@{Environment.ProjectDir}\webserviceengine\responses</Setting>
+      </Category>
+      <Category name="Proxy">
+        <Setting name="Host" legacyPath="WebServiceEngine.Proxy.Host"></Setting>
+        <Setting name="Port" legacyPath="WebServiceEngine.Proxy.Port"></Setting>
+        <Setting name="User name" legacyPath="WebServiceEngine.Proxy.UserName"></Setting>
+        <Setting name="Password" legacyPath="WebServiceEngine.Proxy.Password"></Setting>
+      </Category>
+      <Category name="Validation">
+        <Setting name="Verify Request" legacyPath="WebServiceEngine.Validation.Request">0</Setting>
+        <Setting name="Verify Response" legacyPath="WebServiceEngine.Validation.Response">0</Setting>
+        <Collection name="Request Schemas" legacyPath="WebServiceEngine.Validation.RequestSchemas">
+          <CollectionEntry name="File9q1mhhmx6f8z">${TRICENTIS_HOME}\dll\webserviceengine\schema\encoding.xsd</CollectionEntry>
+          <CollectionEntry name="Filepk0mpimx6fd0">${TRICENTIS_HOME}\dll\webserviceengine\schema\envelope.xsd</CollectionEntry>
+        </Collection>
+        <Collection name="Response Schemas" legacyPath="WebServiceEngine.Validation.ResponseSchemas">
+          <CollectionEntry name="Fileh80n8umx6fe2">${TRICENTIS_HOME}\dll\webserviceengine\schema\envelope.xsd</CollectionEntry>
+          <CollectionEntry name="Fileku1nn1mx6fae">${TRICENTIS_HOME}\dll\webserviceengine\schema\encoding.xsd</CollectionEntry>
+        </Collection>
+      </Category>
+      <Category name="WSDL">
+        <Setting name="Add namespace attribute to operation node" legacyPath="WebServiceEngine.WSDL.AddNameSpaceAttrToOperationNode">0</Setting>
+        <Setting name="Address of endpoint" legacyPath="WebServiceEngine.WSDL.AddressOfEndpoint">Use_specification_in_WSDL_Files</Setting>
+        <Setting name="Path to WSDL Files" legacyPath="WebServiceEngine.WSDL.PathToWSDLFiles"></Setting>
+        <Setting name="RemoveVersionInfo" legacyPath="WebServiceEngine.WSDL.RemoveVersionInfo">0</Setting>
+        <Setting name="Split action string" legacyPath="WebServiceEngine.WSDL.SplitActionString">1</Setting>
+      </Category>
+    </Category>
+    <Category name="SAPEngine">
+      <Setting name="IgnoredRows-Separator" legacyPath="SAPEngine.IgnoredRowsSeparator">;\;</Setting>
+      <Setting name="Maximize SAP Main Window" legacyPath="SAPEngine.maximizeWindow">1</Setting>
+      <Setting name="Show Movements" legacyPath="SAPEngine.showMovements">1</Setting>
+      <Setting name="Startscreen of Testcases" legacyPath="SAPEngine.TestCaseStartScreen">0</Setting>
+      <Category name="Recovery">
+        <Collection name="Systems" legacyPath="SAPEngine.Recovery.Systems" />
+        <Collection name="Users" legacyPath="SAPEngine.Recovery.Users" />
+      </Category>
+    </Category>
+    <Category name="ManualEngine">
+      <Setting name="Language" legacyPath="ManualEngine.Language">English</Setting>
+      <Setting name="UseActionTextTranslation" legacyPath="ManualEngine.UseActionTextTranslation">0</Setting>
+      <Setting name="UseManualEngine" legacyPath="ManualEngine.UseManualEngine">0</Setting>
+      <Category name="Window">
+        <Setting name="MainLeft" legacyPath="ManualEngine.Window.MainLeft">3300</Setting>
+        <Setting name="MainTop" legacyPath="ManualEngine.Window.MainTop">3300</Setting>
+        <Setting name="MainWidth" legacyPath="ManualEngine.Window.MainWidth">5295</Setting>
+        <Setting name="MainHeight" legacyPath="ManualEngine.Window.MainHeight">5130</Setting>
+      </Category>
+    </Category>
+    <Category name="JavaEngine">
+      <Category name="Synchronization">
+        <Category name="CustomWait">
+          <Setting name="customWaitDesc" legacyPath="JavaEngine.customWaitDesc">Name=</Setting>
+          <Setting name="customWaitEnabled" legacyPath="JavaEngine.customWaitEnabled">false</Setting>
+          <Setting name="customWaitContext" legacyPath="JavaEngine.customWaitContext"></Setting>
+          <Setting name="customWaitPropertyName" legacyPath="JavaEngine.customWaitPropertyName">Text</Setting>
+          <Setting name="customWaitPropertyValueGo" legacyPath="JavaEngine.customWaitPropertyValueGo">go</Setting>
+          <Setting name="customWaitTimeout" legacyPath="JavaEngine.customWaitTimeout">1000</Setting>
+          <Setting name="customWaitTypeInfo" legacyPath="JavaEngine.customWaitTypeInfo">WAIT_CONTROL</Setting>
+        </Category>
+        <Setting name="waitAfterShutDown" legacyPath="JavaEngine.waitAfterShutDown">10000</Setting>
+        <Setting name="waitBeforeReConnect" legacyPath="JavaEngine.waitBeforeReConnect">10000</Setting>
+        <Setting name="waitForCursorShape" legacyPath="JavaEngine.waitForCursorShape">true</Setting>
+        <Setting name="waitForCursorTimeout" legacyPath="JavaEngine.waitForCursorTimeout">5000</Setting>
+        <Setting name="waitBetweenRetries" legacyPath="JavaEngine.waitBetweenRetries">100</Setting>
+        <Setting name="waitBetweenKeypress" legacyPath="JavaEngine.waitBetweenKeypress">100</Setting>
+        <Setting name="waitSynchronisation" legacyPath="JavaEngine.waitSynchronisation">100</Setting>
+        <Setting name="waitRmiRegistry" legacyPath="JavaEngine.waitRmiRegistry">30000</Setting>
+        <Setting name="waitThreadTimeout" legacyPath="JavaEngine.waitThreadTimeout">180000</Setting>
+        <Setting name="WaitServerShutDown" legacyPath="JavaEngine.WaitServerShutDown">2000</Setting>
+        <Category name="Progressbar">
+          <Setting name="progressBarName" legacyPath="JavaEngine.progressBarName"></Setting>
+          <Setting name="waitForProgressBar" legacyPath="JavaEngine.waitForProgressBar">false</Setting>
+        </Category>
+      </Category>
+      <Category name="SWT specific">
+        <Setting name="SWT/AWT Mixed Mode" legacyPath="JavaEngine.mixedMode">false</Setting>
+        <Setting name="SWT Datamap IDs" legacyPath="JavaEngine.swtDataMapIDs"></Setting>
+      </Category>
+      <Category name="Recovery">
+        <Setting name="AUT-FileName" legacyPath="JavaEngine.autFile"></Setting>
+        <Setting name="AUT-Directory" legacyPath="JavaEngine.autPath"></Setting>
+      </Category>
+      <Category name="CustomControls">
+        <Setting name="useCustomControls" legacyPath="JavaEngine.useCustomControls">false</Setting>
+        <Collection name="CustomControl XMLs" legacyPath="JavaEngine.CustomControls.CCXML" />
+        <Collection name="CustomControl paths" legacyPath="JavaEngine.CustomControls.ccpath" />
+      </Category>
+      <Category name="RMI">
+        <Setting name="RmiPort" legacyPath="JavaEngine.rmiPort">1099</Setting>
+        <Setting name="RmiServer" legacyPath="JavaEngine.rmiServer">localhost</Setting>
+      </Category>
+      <Setting name="tableColumnSeparator" legacyPath="JavaEngine.tableColumnSeparator">;</Setting>
+      <Setting name="tableRowSeparator" legacyPath="JavaEngine.tableRowSeparator">$10</Setting>
+      <Category name="Swing-Steerings">
+        <Setting name="ComboBox" legacyPath="JavaEngine.SwingSteerings.ComboBox"></Setting>
+        <Setting name="GenericButton" legacyPath="JavaEngine.SwingSteerings.GenericButton"></Setting>
+        <Setting name="GenericText" legacyPath="JavaEngine.SwingSteerings.GenericText"></Setting>
+        <Setting name="List" legacyPath="JavaEngine.SwingSteerings.List"></Setting>
+        <Setting name="RadioButton" legacyPath="JavaEngine.SwingSteerings.RadioButton"></Setting>
+        <Setting name="SwingMenu" legacyPath="JavaEngine.SwingSteerings.SwingMenu"></Setting>
+        <Setting name="Tab" legacyPath="JavaEngine.SwingSteerings.Tab"></Setting>
+        <Setting name="Tree" legacyPath="JavaEngine.SwingSteerings.Tree"></Setting>
+      </Category>
+      <Category name="AWT-Steerings">
+        <Setting name="AWTMenu" legacyPath="JavaEngine.AWTSteerings.AWTMenu"></Setting>
+        <Setting name="Button" legacyPath="JavaEngine.AWTSteerings.Button"></Setting>
+        <Setting name="CheckBox" legacyPath="JavaEngine.AWTSteerings.CheckBox"></Setting>
+      </Category>
+      <Category name="SWT-Steerings">
+        <Setting name="Button" legacyPath="JavaEngine.SWTSteerings.Button"></Setting>
+        <Setting name="CComboBox" legacyPath="JavaEngine.SWTSteerings.CComboBox"></Setting>
+        <Setting name="ComboBox" legacyPath="JavaEngine.SWTSteerings.ComboBox"></Setting>
+        <Setting name="CTab" legacyPath="JavaEngine.SWTSteerings.CTab"></Setting>
+        <Setting name="Tab" legacyPath="JavaEngine.SWTSteerings.Tab"></Setting>
+        <Setting name="Tree" legacyPath="JavaEngine.SWTSteerings.Tree"></Setting>
+        <Setting name="Text" legacyPath="JavaEngine.SWTSteerings.Text"></Setting>
+        <Setting name="Table" legacyPath="JavaEngine.SWTSteerings.Table"></Setting>
+      </Category>
+      <Setting name="BringToFront" legacyPath="JavaEngine.bringToFront">nobody</Setting>
+      <Setting name="checkTextFieldAfterSetValue" legacyPath="JavaEngine.checkTextFieldAfterSetValue">false</Setting>
+      <Setting name="componentProperties" legacyPath="JavaEngine.componentProperties"></Setting>
+      <Setting name="Component search ignores class names" legacyPath="JavaEngine.componentSearchIgnoresClassNames">0</Setting>
+      <Setting name="Component search finds only isShowing" legacyPath="JavaEngine.componentSearchFindsOnlyisShowing">false</Setting>
+      <Setting name="currentSession" legacyPath="JavaEngine.currentsession">JavaEngineServer</Setting>
+      <Setting name="matchType" legacyPath="JavaEngine.matchType">INITIAL</Setting>
+      <Setting name="MultiClient" legacyPath="JavaEngine.multiClient">false</Setting>
+      <Setting name="captureAwtEvents" legacyPath="JavaEngine.captureAwtEvents">false</Setting>
+      <Setting name="captureSwtEvents" legacyPath="JavaEngine.captureSwtEvents">false</Setting>
+    </Category>
+    <Category name="HostEngine">
+      <Setting name="Bring Session To Front" legacyPath="HostEngine.BringToFront">1</Setting>
+      <Setting name="CharsToIdentifyEmptyFields" legacyPath="HostEngine.CharsToIdentifyEmptyFields"></Setting>
+      <Setting name="Close screen key" legacyPath="HostEngine.CloseScreen">{ENTER}</Setting>
+      <Setting name="Field Close Key" legacyPath="HostEngine.FieldCloseKey"></Setting>
+      <Setting name="Field Selection Key" legacyPath="HostEngine.FieldSelectionKey"></Setting>
+      <Setting name="Field Home Key" legacyPath="HostEngine.FieldHomeKey"></Setting>
+      <Setting name="Oracle Mode" legacyPath="HostEngine.OracleForms.EnableOracleMode">0</Setting>
+      <Category name="Table Steering">
+        <Setting name="Column Separator" legacyPath="HostEngine.ColumnSeperator"></Setting>
+        <Category name="Scrolling">
+          <Setting name="Backward Button" legacyPath="HostEngine.TableSteering.Scrolling.ButtonBackward">{F7}</Setting>
+          <Setting name="Forward Button" legacyPath="HostEngine.TableSteering.Scrolling.ButtonForward">{F8}</Setting>
+          <Setting name="ScrollMessageMode" legacyPath="HostEngine.TableSteering.Scrolling.ScrollMessageMode">1</Setting>
+          <Category name="KeyboardLocking">
+            <Setting name="Unlock Keyboard Button" legacyPath="HostEngine.TableSteering.Scrolling.KeyboardLocking.ButtonUnlockKeyboard">{ESC}</Setting>
+          </Category>
+          <Setting name="Backward Message Displayed" legacyPath="HostEngine.TableSteering.Scrolling.BackwardErrorMsgIsDisplayed">1</Setting>
+          <Setting name="Forward Message Displayed" legacyPath="HostEngine.TableSteering.Scrolling.ForwardErrorMsgIsDisplayed">1</Setting>
+          <Category name="Particular Message">
+            <Setting name="First page" legacyPath="HostEngine.TableSteering.Scrolling.DefaultErrorMessage.FirstPage"></Setting>
+            <Setting name="Last page" legacyPath="HostEngine.TableSteering.Scrolling.DefaultErrorMessage.LastPage"></Setting>
+            <Category name="Location">
+              <Setting name="Column" legacyPath="HostEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Col">1</Setting>
+              <Setting name="Height" legacyPath="HostEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Height">1</Setting>
+              <Setting name="Length" legacyPath="HostEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Length">1</Setting>
+              <Setting name="Row" legacyPath="HostEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Row">1</Setting>
+            </Category>
+          </Category>
+          <Category name="MessageChange">
+            <Category name="Location">
+              <Setting name="Column" legacyPath="HostEngine.TableSteering.Scrolling.StatusMessage.Area.Col">1</Setting>
+              <Setting name="Height" legacyPath="HostEngine.TableSteering.Scrolling.StatusMessage.Area.Height">1</Setting>
+              <Setting name="Length" legacyPath="HostEngine.TableSteering.Scrolling.StatusMessage.Area.Length">1</Setting>
+              <Setting name="Row" legacyPath="HostEngine.TableSteering.Scrolling.StatusMessage.Area.Row">1</Setting>
+            </Category>
+          </Category>
+        </Category>
+        <Setting name="Use Table-Representation Implementation" legacyPath="HostEngine.TableSteering.UseTableRepresentationImplementation">1</Setting>
+      </Category>
+      <Category name="Emulation Environment">
+        <Setting name="Emulation Type" legacyPath="HostEngine.EmulationEnvironment">0</Setting>
+        <Setting name="Emulation Title" legacyPath="HostEngine.EmulationTitle">Session A</Setting>
+        <Setting name="Session ID" legacyPath="HostEngine.Session">A</Setting>
+      </Category>
+      <Category name="Emulation Size">
+        <Setting name="Columns" legacyPath="HostEngine.EmulationSize.Columns">80</Setting>
+        <Setting name="Rows" legacyPath="HostEngine.EmulationSize.Rows">24</Setting>
+      </Category>
+      <Category name="Combo Steering">
+        <Setting name="Scroll Button" legacyPath="HostEngine.ComboSteering.ButtonScrollNextChoicePage">{PAGEDOWN}</Setting>
+        <Setting name="Unlock Keyboard Button" legacyPath="HostEngine.ComboSteering.ButtonUnlockKeyboard">{ESC}</Setting>
+        <Setting name="Scrollmode" legacyPath="HostEngine.ComboSteering.Scrollmode">0</Setting>
+        <Setting name="Use Combo choice pages" legacyPath="HostEngine.ComboSteering.UseComboChoicePages">1</Setting>
+      </Category>
+    </Category>
+    <Category name="GuptaEngine">
+      <Category name="Table">
+        <Setting name="Character for invisible columns" legacyPath="GuptaEngine.InvisibleColumnCharacter">||</Setting>
+        <Setting name="RowTableNavigation" legacyPath="GuptaEngine.RowTableNavigation">1</Setting>
+        <Setting name="CalculateTableColumStart" legacyPath="GuptaEngine.CalculateTableColumStart">1</Setting>
+      </Category>
+      <Setting name="NewClickMode" legacyPath="GuptaEngine.NewClickMode">0</Setting>
+      <Setting name="TablePackageSize" legacyPath="GuptaEngine.TablePackageSize">-1</Setting>
+      <Category name="Wait Parameter">
+        <Setting name="Timeout Gupta Process [msec]" legacyPath="GuptaEngine.WaitParameter.WaitForGupta">5000</Setting>
+        <Setting name="Timeout Wait for Window [msec]" legacyPath="GuptaEngine.WaitParameter.WaitForWindow">20000</Setting>
+        <Setting name="Retry Interval [msec]" legacyPath="GuptaEngine.WaitParameter.RetryInterval">2000</Setting>
+        <Setting name="Delay Keystroke [msec]" legacyPath="GuptaEngine.WaitParameter.KeyStroke">50</Setting>
+        <Setting name="Delay Click [msec]" legacyPath="GuptaEngine.WaitParameter.Click">50</Setting>
+      </Category>
+      <Category name="Workaround">
+        <Setting name="TableFactor" legacyPath="GuptaEngine.Workaround.TableFactor">1</Setting>
+      </Category>
+    </Category>
+    <Category name="DBEngine">
+      <Category name="CommandTimeout">
+        <Setting name="CommandTimeoutEnable" legacyPath="Special Engines.DBEngine.CommandTimeout.CommandTimeoutEnable">1</Setting>
+        <Setting name="CommandTimeout [msec]" legacyPath="Special Engines.DBEngine.CommandTimeout.CommandTimeout [msec]">30000</Setting>
+      </Category>
+    </Category>
+    <Category name="GenericEngine">
+      <Setting name="TrimNames" legacyPath="GenericEngine.TrimNames">0</Setting>
+      <Setting name="ShowCtrlsWidthZero" legacyPath="GenericEngine.ShowCtrlsWidthZero">1</Setting>
+      <Setting name="CorrectivityCoords" legacyPath="GenericEngine.CorrectivityCoords">0</Setting>
+      <Category name="Wait Parameter">
+        <Setting name="Timeout Wait for control [msec]" legacyPath="GenericEngine.WaitParameter.WaitForControl">10000</Setting>
+        <Setting name="Timeout Wait for Window [msec]" legacyPath="GenericEngine.WaitParameter.WaitForWindow">20000</Setting>
+        <Setting name="Retry Interval [msec]" legacyPath="GenericEngine.WaitParameter.RetryInterval">2000</Setting>
+      </Category>
+    </Category>
+    <Category name="DelphiEngine">
+      <Setting name="Target is standalone exe-file" legacyPath="DelphiEngine.TargetIsStandaloneEXE">0</Setting>
+      <Setting name="Delphi driver is built into test target" legacyPath="DelphiEngine.DelphiDriverIsBuiltIntoTestTarget">0</Setting>
+      <Setting name="CustomCtrls" legacyPath="DelphiEngine.CustomCtrls"></Setting>
+      <Setting name="GetControl" legacyPath="DelphiEngine.GetControl">0</Setting>
+      <Setting name="DelphiDll" legacyPath="DelphiEngine.DelphiDll">CurrentlyUnused</Setting>
+      <Category name="Wait Parameter">
+        <Setting name="Retry Interval [msec]" legacyPath="DelphiEngine.WaitParameter.RetryInterval">1000</Setting>
+        <Setting name="Wait Number of retries" legacyPath="DelphiEngine.WaitParameter.WaitForControlRetries">5</Setting>
+        <Setting name="Wait for execution of Testaction at Delphi side [msec]" legacyPath="DelphiEngine.WaitParameter.WaitForDelphi">60000</Setting>
+        <Setting name="Wait for out file [msec]" legacyPath="DelphiEngine.WaitParameter.WaitForOutFile">60000</Setting>
+      </Category>
+      <Category name="Steering">
+        <Setting name="EditBox" legacyPath="DelphiEngine.Steering.EditBox">1</Setting>
+        <Setting name="ComboBox" legacyPath="DelphiEngine.Steering.ComboBox">1</Setting>
+        <Setting name="PushButton" legacyPath="DelphiEngine.Steering.PushButton">1</Setting>
+        <Setting name="TabControl" legacyPath="DelphiEngine.Steering.TabControl">1</Setting>
+        <Setting name="RadioButton" legacyPath="DelphiEngine.Steering.RadioButton">1</Setting>
+        <Setting name="CheckBox" legacyPath="DelphiEngine.Steering.CheckBox">1</Setting>
+        <Setting name="TreeView" legacyPath="DelphiEngine.Steering.TreeView">1</Setting>
+        <Setting name="Listview" legacyPath="DelphiEngine.Steering.ListView">1</Setting>
+        <Setting name="ToolBar" legacyPath="DelphiEngine.Steering.ToolBar">1</Setting>
+        <Setting name="ListBox" legacyPath="DelphiEngine.Steering.ListBox">1</Setting>
+      </Category>
+    </Category>
+    <Category name="DotNetEngine">
+      <Setting name="CustomCtrls" legacyPath="DotNetEngine.CustomCtrls">lbaseDotNetCustomControls.dll;AdditionalCtrls40.dll</Setting>
+      <Category name="Steering">
+        <Setting name="CheckBox" legacyPath="DotNetEngine.Steering.CheckBox">1</Setting>
+        <Setting name="ComboBox" legacyPath="DotNetEngine.Steering.ComboBox">0</Setting>
+        <Setting name="EditBox" legacyPath="DotNetEngine.Steering.EditBox">3</Setting>
+        <Setting name="Listview" legacyPath="DotNetEngine.Steering.ListView">1</Setting>
+        <Setting name="PushButton" legacyPath="DotNetEngine.Steering.PushButton">1</Setting>
+        <Setting name="RadioButton" legacyPath="DotNetEngine.Steering.RadioButton">1</Setting>
+        <Setting name="TabControl" legacyPath="DotNetEngine.Steering.TabControl">1</Setting>
+        <Setting name="ToolBar" legacyPath="DotNetEngine.Steering.ToolBar">1</Setting>
+        <Setting name="TreeView" legacyPath="DotNetEngine.Steering.TreeView">1</Setting>
+        <Setting name="ListBox" legacyPath="DotNetEngine.Steering.ListBox">1</Setting>
+      </Category>
+      <Category name="Wait Parameter">
+        <Setting name="Retry Interval [msec]" legacyPath="DotNetEngine.WaitParameter.RetryInterval">2000</Setting>
+        <Setting name="Wait Number of retries" legacyPath="DotNetEngine.WaitParameter.WaitForControlRetries">10</Setting>
+        <Setting name="Timeout Wait for Window [msec]" legacyPath="DotNetEngine.WaitParameter.WaitForWindow">20000</Setting>
+        <Setting name="WaitForDotNet" legacyPath="DotNetEngine.WaitParameter.WaitForDotNet">10000</Setting>
+        <Setting name="Wait time for idle timeout" legacyPath="DotNetEngine.WaitParameter.WaitIdleTimeOut">3000</Setting>
+      </Category>
+    </Category>
+    <Category name="SiebelEngine">
+      <Category name="Setup">
+        <Setting name="WaitingForSiebelExe" legacyPath="SiebelEngine.Setup.WaitingForSiebelExe">2000</Setting>
+      </Category>
+      <Category name="Controls">
+        <Category name="SiebelList">
+          <Setting name="RowSeperator" legacyPath="SiebelEngine.Controls.SiebelList.RowSeperator">\r\n</Setting>
+          <Setting name="ColumnSeperator" legacyPath="SiebelEngine.Controls.SiebelList.ColumnSeperator">;</Setting>
+        </Category>
+      </Category>
+      <Category name="Wait">
+        <Setting name="WaitingForSiebel" legacyPath="SiebelEngine.Wait.WaitingForSiebel">2000</Setting>
+        <Setting name="WaitingForControl" legacyPath="SiebelEngine.Wait.WaitingForControl">2000</Setting>
+        <Setting name="WaitingForWindow" legacyPath="SiebelEngine.Wait.WaitingForWindow">2000</Setting>
+      </Category>
+    </Category>
+    <Category name="FireFoxEngine">
+      <Setting name="CustomControls" legacyPath="FireFoxEngine.FFCustomControls"></Setting>
+      <Setting name="FFComponentDLL" legacyPath="FireFoxEngine.FFComponentDLL">${ProgramFiles}\Mozilla Firefox\components\Tricentis_FirefoxOperator.dll</Setting>
+      <Setting name="WaitTimeTransferFile" legacyPath="FireFoxEngine.WaitTimeTransferFile">100000</Setting>
+    </Category>
+    <Category name="ConsoleEngine">
+      <Setting name="Bring Session To Front" legacyPath="ConsoleEngine.BringToFront">1</Setting>
+      <Setting name="CharsToIdentifyEmptyFields" legacyPath="ConsoleEngine.CharsToIdentifyEmptyFields"></Setting>
+      <Setting name="Close screen key" legacyPath="ConsoleEngine.CloseScreen">noclose</Setting>
+      <Setting name="ColumnSeperator" legacyPath="ConsoleEngine.ColumnSeperator"></Setting>
+      <Category name="Emulation Size">
+        <Setting name="Columns" legacyPath="ConsoleEngine.EmulationSize.Columns">80</Setting>
+        <Setting name="Rows" legacyPath="ConsoleEngine.EmulationSize.Rows">25</Setting>
+      </Category>
+      <Category name="Combo Steering">
+        <Setting name="Scroll Button" legacyPath="ConsoleEngine.ComboSteering.ButtonScrollNextChoicePage">{PAGEDOWN}</Setting>
+        <Setting name="Scrollmode" legacyPath="ConsoleEngine.ComboSteering.Scrollmode">0</Setting>
+        <Setting name="Use Combo choice pages" legacyPath="ConsoleEngine.ComboSteering.UseComboChoicePages">1</Setting>
+      </Category>
+      <Category name="Table Steering">
+        <Category name="Scrolling">
+          <Setting name="Backward ErrMsg Displayed" legacyPath="ConsoleEngine.TableSteering.Scrolling.BackwardErrorMsgIsDisplayed">1</Setting>
+          <Setting name="Backward Button" legacyPath="ConsoleEngine.TableSteering.Scrolling.ButtonBackward">{F7}</Setting>
+          <Setting name="Forward Button" legacyPath="ConsoleEngine.TableSteering.Scrolling.ButtonForward">{F8}</Setting>
+          <Setting name="Forward ErrMsg Displayed" legacyPath="ConsoleEngine.TableSteering.Scrolling.ForwardErrorMsgIsDisplayed">1</Setting>
+          <Setting name="ScrollMessageMode" legacyPath="ConsoleEngine.TableSteering.Scrolling.ScrollMessageMode">1</Setting>
+          <Category name="Default Error Message">
+            <Setting name="First page" legacyPath="ConsoleEngine.TableSteering.Scrolling.DefaultErrorMessage.FirstPage"></Setting>
+            <Setting name="Last page" legacyPath="ConsoleEngine.TableSteering.Scrolling.DefaultErrorMessage.LastPage"></Setting>
+            <Category name="Location">
+              <Setting name="Column" legacyPath="ConsoleEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Col">1</Setting>
+              <Setting name="Height" legacyPath="ConsoleEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Height">1</Setting>
+              <Setting name="Length" legacyPath="ConsoleEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Length">1</Setting>
+              <Setting name="Row" legacyPath="ConsoleEngine.TableSteering.Scrolling.DefaultErrorMessage.Area.Row">1</Setting>
+            </Category>
+          </Category>
+          <Category name="StatusMessage">
+            <Category name="Location">
+              <Setting name="Column" legacyPath="ConsoleEngine.TableSteering.Scrolling.StatusMessage.Area.Col">1</Setting>
+              <Setting name="Height" legacyPath="ConsoleEngine.TableSteering.Scrolling.StatusMessage.Area.Height">1</Setting>
+              <Setting name="Length" legacyPath="ConsoleEngine.TableSteering.Scrolling.StatusMessage.Area.Length">1</Setting>
+              <Setting name="Row" legacyPath="ConsoleEngine.TableSteering.Scrolling.StatusMessage.Area.Row">1</Setting>
+            </Category>
+          </Category>
+        </Category>
+      </Category>
+      <Setting name="Field Close Key" legacyPath="ConsoleEngine.FieldCloseKey">{ENTER}</Setting>
+      <Setting name="Field Selection Key" legacyPath="ConsoleEngine.FieldSelectionKey">{DOWN}</Setting>
+      <Setting name="Field Home Key" legacyPath="ConsoleEngine.FieldHomeKey">{BKSP}</Setting>
+      <Category name="RadioField">
+        <Setting name="Key to Move to Next Radio Field" legacyPath="ConsoleEngine.RadioField.KeyToMoveToNextRadioField">{RIGHT}</Setting>
+        <Setting name="Maximum Selection Attempts" legacyPath="ConsoleEngine.RadioField.MaximumSelectionAttempts">20</Setting>
+        <Setting name="Selection Background Color" legacyPath="ConsoleEngine.RadioField.SelectionBackgroundColor">1</Setting>
+      </Category>
+    </Category>
+    <Category name="XMLEngine">
+      <Collection name="XML Namespaces" legacyPath="XMLEngine.XMLNamespaces" />
+    </Category>
+  </Category>
+  <Category name="TOSCAViewer">
+    <Setting name="Details Viewer" legacyPath="TestState.DetailsViewer">${TRICENTIS_HOME}\dll\TOSCAViewer.exe -m "&lt;metasettings&gt;" -language "&lt;language&gt;" -role "&lt;role&gt;" -base "&lt;base&gt;" -dump "&lt;dump&gt;"</Setting>
+    <Collection name="File Extensions" legacyPath="TOSCAViewer.FileNames" />
+    <Collection name="File Viewers" legacyPath="TOSCAViewer.Path" />
+    <Collection name="File Viewer Arguments" legacyPath="TOSCAViewer.CommandLine" />
+  </Category>
+</TOSCASettings>

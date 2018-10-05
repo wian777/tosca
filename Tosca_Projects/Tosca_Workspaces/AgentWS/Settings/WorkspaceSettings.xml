@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TOSCASettings xmlns="TOSCANamespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Category name="Workspace">
+    <Setting name="SettingsDir" legacyPath="Workspace.SettingsDir">C:\Users\wian\AppData\Roaming\TRICENTIS\TOSCA TestSuite\7.0.0\Temp\Settings</Setting>
+  </Category>
+</TOSCASettings>
