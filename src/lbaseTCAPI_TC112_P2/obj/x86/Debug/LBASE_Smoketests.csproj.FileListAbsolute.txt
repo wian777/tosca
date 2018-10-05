@@ -1,0 +1,25 @@
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\bin\Debug\LBASE_Smoketests.exe.config
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\bin\Debug\LBASE_Smoketests.exe
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\bin\Debug\LBASE_Smoketests.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\obj\x86\Debug\LBASE_Smoketests.csprojResolveAssemblyReference.cache
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\obj\x86\Debug\LBASE_Smoketests.csproj.CoreCompileInputs.cache
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\obj\x86\Debug\LBASE_Smoketests.exe
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI\obj\x86\Debug\LBASE_Smoketests.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC11.2\bin\Debug\LBASE_Smoketests.exe.config
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC11.2\bin\Debug\LBASE_Smoketests.exe
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC11.2\bin\Debug\LBASE_Smoketests.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC11.2\obj\x86\Debug\LBASE_Smoketests.csprojResolveAssemblyReference.cache
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC11.2\obj\x86\Debug\LBASE_Smoketests.exe
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC11.2\obj\x86\Debug\LBASE_Smoketests.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC112_P2\bin\Debug\LBASE_Smoketests.exe.config
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC112_P2\bin\Debug\LBASE_Smoketests.exe
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC112_P2\bin\Debug\LBASE_Smoketests.pdb
+C:\Tosca_Projects\Tosca_Workspaces\lbase\LBASE_Smoketests.exe.config
+C:\Tosca_Projects\Tosca_Workspaces\lbase\LBASE_Smoketests.exe
+C:\Tosca_Projects\Tosca_Workspaces\lbase\LBASE_Smoketests.pdb
+C:\Tosca_Projects\Tosca_Workspaces\lbaseGuiFeatureTests\LBASE_Smoketests.exe.config
+C:\Tosca_Projects\Tosca_Workspaces\lbaseGuiFeatureTests\LBASE_Smoketests.exe
+C:\Tosca_Projects\Tosca_Workspaces\lbaseGuiFeatureTests\LBASE_Smoketests.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC112_P2\obj\x86\Debug\LBASE_Smoketests.csprojResolveAssemblyReference.cache
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC112_P2\obj\x86\Debug\LBASE_Smoketests.exe
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseTCAPI_TC112_P2\obj\x86\Debug\LBASE_Smoketests.pdb

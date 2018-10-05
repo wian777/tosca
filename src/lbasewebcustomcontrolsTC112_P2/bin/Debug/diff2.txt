@@ -1,0 +1,220 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using Tricentis.Automation.AutomationInstructions.TestActions;
+using Tricentis.Automation.AutomationInstructions.TestActions.Associations;
+using Tricentis.Automation.Creation;
+using Tricentis.Automation.Engines.Adapters.Controllers;
+using Tricentis.Automation.Engines.Representations.Attributes;
+using Tricentis.Automation.Engines.Technicals;
+using Tricentis.Automation.Engines.Technicals.Html;
+using System.Diagnostics;
+
+namespace HtmlTable.Html.Adapter.Controller 
+{
+	// The Controller resolves the relation between single elements that belong to each other logically. In this case the Controller
+    // is derived from TableContextAdapterController, which describes how to get from the table element (that is the HTML element that 
+    // contains the complete table) to the rows inside the tables.
+    // The TableContextAdapterController takes an Adapter as generic parameter. It's the same as the SupportedAdapter.
+
+    // The SupportedAdapter describes the Adapter type which this controller needs as input source. It represents the starting point.
+    // Therefore it must implement an ITableAdapter!
+    [SupportedAdapter(typeof(lbaseWebTableWindowAdapter))]
+    public class lbaseWebTableWindowAdapterController : TableContextAdapterController<lbaseWebTableWindowAdapter> {
+
+        // A controller will get several input parameters: 
+        //  * The actual Adapter object that it should use as a starting point, 
+        //  * an ISearchQuery: this carries all the parameter of the module, which are required by the framework to find the 
+        //      matching HTML elements. The ISearchQuery is very rarely used in customized Controllers.
+        //  * and a validator. The validator can be used to express if the Controller is applicable for the input parameters,
+        //      however it is not needed in this case because this Controller can deal with all lbaseWebTableWindowAdapters.
+		public lbaseWebTableWindowAdapterController(lbaseWebTableWindowAdapter contextAdapter, ISearchQuery query, Validator validator)
+			: base(contextAdapter, query, validator)
+		{
+        }
+
+		#region Overrides of ContextAdapterController<lbaseWebTableWindowAdapter>
+		// Several methods have to be overridden from the (Table)ContextAdapterController. The following three methods describe how to
+        // get from the given adapter to its 
+        //  + direct children in the HTML structure  
+        //  + to all its descendants in the HTML structure
+        //  + to its parent
+        //  + to its logical children, the row nodes
+
+        // The implementation of each of these methods is pretty straight forward in this case. The Technical associations can be used.
+        // A TechnicalAssociation tells the framework to search for a property on the HTML Technical (its name is passed in as a string).
+        // That property is invoked and the result is the collection of the according nodes passed back to the framework
+        protected override IEnumerable<IAssociation> ResolveAssociation(ChildrenBusinessAssociation businessAssociation) {
+            yield return new TechnicalAssociation("Children");
+        }
+
+        protected override IEnumerable<IAssociation> ResolveAssociation(DescendantsBusinessAssociation businessAssociation) {
+            yield return new TechnicalAssociation("All");
+        }
+
+        protected override IEnumerable<IAssociation> ResolveAssociation(ParentBusinessAssociation businessAssociation) {
+            yield return new TechnicalAssociation("ParentNode");
+        }
+
+        #endregion
+
+        #region Overrides of TableContextAdapterController<lbaseWebTableWindowAdapter>
+        // These methods are the most important ones for this Controller - it tells the framework how to get to the rows (or columns if you
+        // have a column based table). 
+        // But since this table has an easy comprehensible structure, it is just necessary to ask the framework to get all direct children.
+        // The Technical Association 'Children' can be used.
+        protected override IEnumerable<IAssociation> ResolveAssociation(RowsBusinessAssociation businessAssociation) {
+            //yield return new TechnicalAssociation("Children");
+            //throw new NotSupportedException();
+            //yield return new TechnicalAssociation("All");
+
+
+            yield return new AlgorithmicAssociation("Rows");
+
+            //yield return new TechnicalAssociation("All");
+        }
+
+        protected override IEnumerable<IAssociation> ResolveAssociation(ColumnsBusinessAssociation businessAssociation) {
+            //yield return new AlgorithmicAssociation("Cols");
+            throw new NotSupportedException();
+        }
+
+		//protected override IEnumerable<IAssociation> ResolveAssociation(CellsBusinessAssociation businessAssociation)
+		//{
+		//	yield return new AlgorithmicAssociation("Cells");
+		//}
+
+        #endregion  
+
+		protected override IEnumerable<ITechnical> SearchTechnicals(
+			IAlgorithmicAssociation algorithmicAssociation)
+		{
+
+            return GetAllRows();
+			/*if (algorithmicAssociation.AlgorithmName == "Cols")
+			{
+				return GetCols();
+			}
+			else if (algorithmicAssociation.AlgorithmName == "Rows")
+			{
+				return GetRows();
+			}
+			return base.SearchTechnicals(algorithmicAssociation);*/
+		}
+
+        private IEnumerable<ITechnical> GetAllRows()
+        {
+            List<ITechnical> rows = new List<ITechnical>();
+
+            IHtmlDivTechnical table = ContextAdapter.Technical;
+
+            var list = table.GetElementByTagName("DIV").Get<IHtmlDivTechnical>();
+            
+            foreach(IHtmlDivTechnical div in list)
+            {
+                if (div.Id.Contains("VWGROW") || div.Id.Contains("VWGDGVFROZENCOLUMNS"))
+                {
+                    Debug.WriteLine("DEBUGCC: " + div.ClassName);
+                    rows.Add(div);
+                }
+            }         
+
+            return rows;
+        }
+
+        private void GetChilds(IHtmlDivTechnical div, List<ITechnical> rows)
+        {
+            if (div.ClassName.Contains("VWGROW"))
+            {
+                Debug.WriteLine("DEBUG: " + div.ClassName);
+                rows.Add(div);
+            }
+
+            var list = div.Children.Get<IHtmlDivTechnical>();
+            foreach(IHtmlDivTechnical element in list)
+            {
+                GetChilds(div, rows);
+            }
+        }
+
+        private IEnumerable<ITechnical> GetCols()
+		{
+			List<ITechnical> items = new List<ITechnical>();
+
+			string id = ContextAdapter.Technical.Id;
+
+			IHtmlDivTechnical div = ContextAdapter.Technical.Document.Get<IHtmlDocumentTechnical>().GetById(id).Get<IHtmlDivTechnical>();
+
+
+			var unselectable = div.Children.Get<IHtmlDivTechnical>().FirstOrDefault(x => x.ClassName.Contains("Common-Unselectable"));
+			var frozencols = unselectable.Children.Get<IHtmlDivTechnical>().FirstOrDefault().Children.Get<IHtmlDivTechnical>().FirstOrDefault(x => x.Id.StartsWith("VWGDGVFROZENCOLUMNS_"));
+
+			var frozencolscol = frozencols.Children.Get<IHtmlDivTechnical>().FirstOrDefault().Children.Get<IHtmlDivTechnical>();
+
+			foreach (IHtmlElementTechnical colTechnical in frozencolscol.FirstOrDefault().Children.Get<IHtmlDivTechnical>())
+			{
+				System.Diagnostics.Debug.WriteLine(colTechnical.Id);
+				items.AddRange(colTechnical.Children.Get<ITechnical>());
+
+			}
+
+			return items;
+		}
+
+		private IEnumerable<ITechnical> GetHeaderRow()
+		{
+			List<ITechnical> items = new List<ITechnical>();
+
+			string id = ContextAdapter.Technical.Id;
+
+			IHtmlDivTechnical div = ContextAdapter.Technical.Document.Get<IHtmlDocumentTechnical>().GetById(id).Get<IHtmlDivTechnical>();
+
+
+			var unselectable = div.Children.Get<IHtmlDivTechnical>().FirstOrDefault(x => x.ClassName.Contains("Common-Unselectable"));
+			var frozencols = unselectable.Children.Get<IHtmlDivTechnical>().FirstOrDefault().Children.Get<IHtmlDivTechnical>().FirstOrDefault(x => x.Id.StartsWith("VWGDGVFROZENCOLUMNS_"));
+
+			//var frozencolscol = frozencols.Children.Get<IHtmlDivTechnical>();
+
+			foreach (IHtmlElementTechnical colTechnical in frozencols.Children.Get<IHtmlDivTechnical>())
+			{
+				System.Diagnostics.Debug.WriteLine("ID " + colTechnical.Id);
+				items.AddRange(colTechnical.Children.Get<ITechnical>());
+
+			}
+
+			return items;
+		}
+
+		private IEnumerable<ITechnical> GetRows()
+		{
+			List<ITechnical> items = new List<ITechnical>();
+
+			string id = ContextAdapter.Technical.Id;
+
+			IHtmlDivTechnical div = ContextAdapter.Technical.Document.Get<IHtmlDocumentTechnical>().GetById(id).Get<IHtmlDivTechnical>();
+
+
+			var unselectable = div.Children.Get<IHtmlDivTechnical>().FirstOrDefault(x => x.ClassName.Contains("Common-Unselectable"));
+			var divx = unselectable.Children.Get<IHtmlDivTechnical>().LastOrDefault().Children.Get<IHtmlDivTechnical>().FirstOrDefault().Children.Get<IHtmlDivTechnical>().FirstOrDefault().Children.Get<IHtmlDivTechnical>().FirstOrDefault();
+			var blockscontainer = divx.Children.Get<IHtmlDivTechnical>().FirstOrDefault(x => x.Id.StartsWith("VWGBlocksContainer_")).Children.Get<IHtmlDivTechnical>();
+
+			items.AddRange(GetHeaderRow());
+
+			foreach (IHtmlDivTechnical dgvb in blockscontainer)
+			{
+				if (dgvb.Children.Count > 0)
+				{
+					var divxx = dgvb.Children.Get<IHtmlDivTechnical>().FirstOrDefault().Children.Get<IHtmlDivTechnical>();
+					foreach (IHtmlDivTechnical rowTechnical in divxx)
+					{
+						System.Diagnostics.Debug.WriteLine("ID " + rowTechnical.Id);
+						items.AddRange(rowTechnical.Children.Get<ITechnical>());
+					}
+				}
+			}
+
+
+			return items;
+		}
+    }
+}

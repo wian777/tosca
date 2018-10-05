@@ -1,0 +1,16 @@
+C:\Program Files (x86)\TRICENTIS\Tosca Testsuite\Automation\Framework\lbaseWebCustomControls.dll
+C:\Users\wian\Source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrols\obj\Debug\lbaseWebCustomControls.csproj.CoreCompileInputs.cache
+C:\Users\wian\Source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrols\obj\Debug\lbaseWebCustomControls.dll
+C:\Users\wian\Source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrols\obj\Debug\lbaseWebCustomControls.pdb
+C:\TRICENTIS\ToscaTestsuite\Automation\Framework\lbaseWebCustomControls.dll
+C:\TRICENTIS\ToscaTestsuite\Automation\Framework\lbaseWebCustomControls.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrols\obj\Debug\lbaseWebCustomControls.csprojResolveAssemblyReference.cache
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC11.2\bin\Debug\lbaseWebCustomControls.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC11.2\bin\Debug\lbaseWebCustomControls.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC11.2\obj\Debug\lbaseWebCustomControls.csprojResolveAssemblyReference.cache
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC11.2\obj\Debug\lbaseWebCustomControls.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC11.2\obj\Debug\lbaseWebCustomControls.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC112_P2\bin\Debug\lbaseWebCustomControls.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC112_P2\bin\Debug\lbaseWebCustomControls.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC112_P2\obj\Debug\lbaseWebCustomControls.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbasewebcustomcontrolsTC112_P2\obj\Debug\lbaseWebCustomControls.pdb

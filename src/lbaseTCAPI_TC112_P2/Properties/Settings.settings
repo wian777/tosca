@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LBASE_Smoketests.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WorkspaceUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">API</Value>
+    </Setting>
+    <Setting Name="WorkspacePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LogfilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\TOSCA_PROJECTS\TOSCA_Workspaces\log\</Value>
+    </Setting>
+    <Setting Name="ReportPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\tfdbnbld01\LBase\QA\tosca\Reports\TestAPI\</Value>
+    </Setting>
+    <Setting Name="Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tfdbnlx16</Value>
+    </Setting>
+    <Setting Name="SID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">QAUTF8</Value>
+    </Setting>
+    <Setting Name="WorkspacePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Tosca_Projects\Tosca_Workspaces\lbase\lbase.tws</Value>
+    </Setting>
+    <Setting Name="LogfileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TestAPI_TC11</Value>
+    </Setting>
+    <Setting Name="WorkspaceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">lbase</Value>
+    </Setting>
+    <Setting Name="EMailAdresse" Type="System.String" Scope="User">
+      <Value Profile="(Default)">qualityassurance@lbase.software</Value>
+    </Setting>
+    <Setting Name="EMailAdresseCc" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EMailAdresseBcc" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ExecutionlistProperties" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TestAPI</Value>
+    </Setting>
+    <Setting Name="LogLevel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="WhatLogging" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WorkspaceLogging</Value>
+    </Setting>
+    <Setting Name="checkoutable" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OvernightExecution</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OvernightExecutionFeatureTests</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OvernightExecutionGuiTests</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OvernightExecution_lbaseWeb</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OvernightExecution_lbaseWebGuiTests</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">OvernightExecutionSecondTest</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ReproduceFailure</Value>
+    </Setting>
+    <Setting Name="ExecutionlistProperties_template8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TestAPI</Value>
+    </Setting>
+    <Setting Name="LockFileDelete" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
