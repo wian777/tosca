@@ -1,0 +1,4 @@
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\StartProgram\StartProgram\bin\Debug\StartProgram.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\StartProgram\StartProgram\bin\Debug\StartProgram.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\StartProgram\StartProgram\obj\Debug\StartProgram.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\StartProgram\StartProgram\obj\Debug\StartProgram.pdb
