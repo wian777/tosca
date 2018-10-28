@@ -1,0 +1,4 @@
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\ShowInfo\ShowInfo\bin\Debug\ShowInfo.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\ShowInfo\ShowInfo\bin\Debug\ShowInfo.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\ShowInfo\ShowInfo\obj\Debug\ShowInfo.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\ShowInfo\ShowInfo\obj\Debug\ShowInfo.pdb
