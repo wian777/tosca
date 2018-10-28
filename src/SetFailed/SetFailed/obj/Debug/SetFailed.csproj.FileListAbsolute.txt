@@ -1,0 +1,4 @@
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\SetFailed\SetFailed\bin\Debug\SetFailed.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\SetFailed\SetFailed\bin\Debug\SetFailed.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\SetFailed\SetFailed\obj\Debug\SetFailed.dll
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\SetFailed\SetFailed\obj\Debug\SetFailed.pdb
