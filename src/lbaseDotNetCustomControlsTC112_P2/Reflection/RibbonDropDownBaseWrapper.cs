@@ -29,13 +29,14 @@ namespace lbaseDotNetCustomControls.Reflection
             {
                 if (!Enabled)
                 {
-                    throw new NotEnabledException("Das Item >" + Text + "< ist nicht enabled!");
+                    throw new NotEnabledException("Das Item >" + Text + "< ist nicht enabled, um ein dropdown durchzufzuehren!");
                 }
                 else
                 {
-                    Thread.Sleep(1000);
-                    Console.WriteLine("Habe 1000 Milisekunden gewartet - wian");
+                    // Thread.Sleep(1000);
+                    // Console.WriteLine("Habe 2 mal 1000 Milisekunden gewartet - wian");
                     ReflectionHelper.ReflectionHelper.SetProperty(item, "DroppedDown", value);
+                    // Thread.Sleep(1000);
                 }
             }
         }

@@ -447,10 +447,12 @@ namespace lbaseDotNetCustomControls
             {
                 if (currWrapper is RibbonDropDownBaseWrapper)
                 {
+                    // Z.B. [MENU]DATEI->Beenden
                     RibbonDropDownBaseWrapper currDropDownWrapper = currWrapper as RibbonDropDownBaseWrapper;
                     currDropDownWrapper.DroppedDown = true;
                     String currItemToFind = items[0];
                     items = items.Skip(1).ToList();
+                    // Thread.Sleep(2000);
                     currWrapper = currDropDownWrapper.Items[currItemToFind];
                 }
                 else throw new NotSupportedException("Das Item >" + currWrapper.Text + "< ist kein gültiges DropDownItem (RibbonMenu oder SplitButton)!");

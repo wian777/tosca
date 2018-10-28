@@ -25,10 +25,11 @@ namespace lbaseDotNetCustomControls.Reflection
 
 		private void ClickInternal()
 		{
-			Thread.Sleep(100);
+			// Thread.Sleep(2000);
 
-			((this.item as C1.Win.C1Ribbon.RibbonButton).OwnerControl as Control).Invoke((MethodInvoker)delegate { ClickInternalInvoke(); });
-		}
+            ((this.item as C1.Win.C1Ribbon.RibbonButton).OwnerControl as Control).Invoke((MethodInvoker)delegate { ClickInternalInvoke(); });
+            // ((item as C1.Win.C1Ribbon.RibbonButton).OwnerControl as Control).Invoke((MethodInvoker)delegate { ClickInternalInvoke(); });
+        }
 
         private void ClickInternalInvoke()
         {		
@@ -39,9 +40,19 @@ namespace lbaseDotNetCustomControls.Reflection
             {
                 // Es ist PPJ 46:
                 if (!Enabled)
-                    throw new NotEnabledException("Der Button >" + Text + "< ist nicht enabled!");				
+                    throw new NotEnabledException("Der Button >" + Text + "< ist nicht enabled!");
 
-                ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian                
+                try
+                {
+                    // Thread.Sleep(300);
+                    ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian
+                    ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }                
             }
             else
             {
@@ -64,7 +75,7 @@ namespace lbaseDotNetCustomControls.Reflection
                     {
                         Logger.Instance.Log(ioe.ToString());
                     }
-                    Thread.Sleep(300);
+                    // Thread.Sleep(300);
                     /*
                     * 
                      // 20151022 wian:
@@ -92,12 +103,13 @@ namespace lbaseDotNetCustomControls.Reflection
 
                     // 20151022 wian:
                     // Diese Änderung ist seit dem Wechsel von ppj framework auf PPJ.Runtime.45.dll mit Dateiversion 4.5.1056.646 ab lbase 6.4 nötig
-                    Thread.Sleep(600);
+                    // Thread.Sleep(600);
                     // ReflectionHelper.ReflectionHelper.GetMethodNames(item);
                     // ReflectionHelper.ReflectionHelper.GetMethodNames(item).Skip(100).ToArray()
 
-                    ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian
                     Thread.Sleep(300);
+                    ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian
+                    // Thread.Sleep(300);
                     /*
                      * Mit folgendem Befehl während Debuggen im Direktfenster die Methoden von item ermitteln:
                      ReflectionHelper.ReflectionHelper.GetMethodNames(item)

@@ -15,8 +15,8 @@ C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC11.2
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC11.2\obj\Debug\lbaseDotNetCustomControls.pdb
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\bin\Debug\lbaseDotNetCustomControls.dll
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\bin\Debug\lbaseDotNetCustomControls.pdb
-C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\obj\Debug\lbaseDotNetCustomControls.csprojResolveAssemblyReference.cache
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\obj\Debug\lbaseDotNetCustomControls.Properties.Resources.resources
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\obj\Debug\lbaseDotNetCustomControls.csproj.GenerateResource.Cache
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\obj\Debug\lbaseDotNetCustomControls.dll
 C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\obj\Debug\lbaseDotNetCustomControls.pdb
+C:\Users\wian\source\Workspaces\LBASE Tosca\Main\lbaseDotNetCustomControlsTC112_P2\obj\Debug\lbaseDotNetCustomControls.csprojResolveAssemblyReference.cache
