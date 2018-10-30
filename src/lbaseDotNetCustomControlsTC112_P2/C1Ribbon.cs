@@ -34,6 +34,8 @@ namespace lbaseDotNetCustomControls
         private String rDelem     = ";";
         bool rAskEnabled = true;
 
+        public bool isMenu = false;
+
         TextDatei c_textdatei = new TextDatei();
 
         String ModulPath = "\\\\tfdbnbld01\\LBase\\QA\\tosca\\wizardexport";
@@ -266,7 +268,7 @@ namespace lbaseDotNetCustomControls
         #region FindItem
         private IWrappedObjectWithText FindItem(String itemString)
         {
-            bool isMenu = false;
+            // bool isMenu = false;
             if (itemString.ToLower().TrimStart().StartsWith("[menu]"))
             {
                 isMenu = true;

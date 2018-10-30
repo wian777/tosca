@@ -44,9 +44,33 @@ namespace lbaseDotNetCustomControls.Reflection
 
                 try
                 {
+                    // var isMenu = (this.item as C1.Win.C1Ribbon.RibbonButton).OwnerControl;
                     // Thread.Sleep(300);
-                    ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian
-                    ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j");
+                    
+                    // in german.txt wird fuer DATEI-Beenden nur Ribbon.riBackstagBeenden@Beenden verwendet
+                    if (this.Name.ToLower().Contains("ribackstag"))
+                    {
+                        switch (this.Name.ToLower())
+                        {
+                            case "ribbon.ribackstagbeenden":
+                            case "ribbon.ribackstagedrucken":
+                            case "ribbon.ribackstagespeichernunter":
+                            // case "Ribbon.riBackstageProgramminfo":
+                                ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian
+                                                                                           // nur wenn [MENU]DATEI->Beenden verwendet wurde, zwei mal "j"!
+                                ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j");
+                                break;
+                            default:
+                                ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j");
+                                break;
+                        }
+                    }
+
+                    else
+                    {
+                        ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j");
+                    }
+                        
                 }
                 catch (Exception)
                 {
@@ -132,6 +156,11 @@ namespace lbaseDotNetCustomControls.Reflection
         public override String Text
         {
             get { return (String)ReflectionHelper.ReflectionHelper.GetProperty(item, "Text"); }
+        }
+
+        public String Name
+        {
+            get { return (String)ReflectionHelper.ReflectionHelper.GetProperty(item, "Name"); }
         }
     }
 }
