@@ -83,28 +83,37 @@ namespace lbaseDotNetCustomControls.Reflection
 
                 if (currChild.GetType() == typeof(C1.Win.C1Ribbon.RibbonToggleButton))
                 {
-                    // RibbonToggleButton
-                    var buttons = ((C1.Win.C1Ribbon.RibbonToggleButton)currChild).Group.Items;
-                    int nButtons = buttons.Count;
-                    // if (buttons.IndexOf(text) != -1)
-                    while (currMatchIndex < nButtons)
+                    if (((C1.Win.C1Ribbon.RibbonToggleButton)currChild).Name.Contains("riBackstage"))
                     {
-                        if (typeof(C1.Win.C1Ribbon.RibbonToggleButton) == buttons.GetType())
+                        // wenn in [MENU]DATEI
+                        // soll in weiterem Verlauf erledigt werden, nicht hier
+                    }
+                    else
+                    { 
+                        // RibbonToggleButton
+                        var buttons = ((C1.Win.C1Ribbon.RibbonToggleButton)currChild).Group.Items;
+                        int nButtons = buttons.Count;
+
+                        // if (buttons.IndexOf(text) != -1)
+                        while (currMatchIndex < nButtons)
                         {
-                            if (StringHelpers.DoStringsMatch(((C1.Win.C1Ribbon.RibbonToggleButton)currChild).Text, text))
+                            if (typeof(C1.Win.C1Ribbon.RibbonToggleButton) == buttons.GetType())
                             {
-                                if (matchIndex <= currMatchIndex)
-                                    // currChildElementWrapper = WrapChildElement(buttons[currMatchIndex]);
-                                    return currChildElementWrapper;
+                                if (StringHelpers.DoStringsMatch(((C1.Win.C1Ribbon.RibbonToggleButton)currChild).Text, text))
+                                {
+                                    if (matchIndex <= currMatchIndex)
+                                        // currChildElementWrapper = WrapChildElement(buttons[currMatchIndex]);
+                                        return currChildElementWrapper;
+                                }
+                                else
+                                {
+                                    currMatchIndex++;
+                                }
                             }
                             else
                             {
                                 currMatchIndex++;
                             }
-                        }
-                        else
-                        {
-                            currMatchIndex++;
                         }
                     }
                 }

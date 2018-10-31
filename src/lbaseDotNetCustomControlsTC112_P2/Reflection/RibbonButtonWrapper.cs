@@ -55,9 +55,11 @@ namespace lbaseDotNetCustomControls.Reflection
                             case "ribbon.ribackstagbeenden":
                             case "ribbon.ribackstagedrucken":
                             case "ribbon.ribackstagespeichernunter":
-                            // case "Ribbon.riBackstageProgramminfo":
+                            case "ribbon.ribackstageprogramminfo":
+                            case "ribbon.ribackstagesendenininternetbrowser":
+                            case "ribbon.ribackstageberechtigungsinformation":
                                 ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j"); // a OnClick is invoked with the "j" Method ;-) wian
-                                                                                           // nur wenn [MENU]DATEI->Beenden verwendet wurde, zwei mal "j"!
+                                                                                           // nur wenn [MENU]DATEI->Beenden verwendet wurde (oder siehe obige case), zwei mal "j"!
                                 ReflectionHelper.ReflectionHelper.InvokeMethod(item, "j");
                                 break;
                             default:
